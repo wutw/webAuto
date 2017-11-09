@@ -1,0 +1,144 @@
+/*html{
+    overflow:hidden;
+}*/
+@import "_app";
+@import "_reset";
+@charset "utf-8";
+
+.webContainer{
+    padding: 20px;
+    height: 100%;
+    h2 {
+        border-bottom: 1px dashed #0e74cc;
+        padding-bottom: 13px;
+        margin-bottom:0!important;
+        margin-top:0!important;
+        img{
+            padding-right:8px;
+            vertical-align: text-bottom;
+        }
+    }
+
+}
+
+.networkStatus{
+    padding: 6% 0;
+    text-align: center;
+    span{
+        padding-left: 4%;
+    }
+    p{
+        position: relative;
+        padding-top: 8px;
+        span{
+            position: absolute;
+            &:first-child{
+
+                left: 19%;
+            }
+            &:nth-child(2){
+                left: 47%;
+            }
+            &:last-child{
+
+                right: 19%;
+            }
+        }
+    }
+}
+
+
+.equipmentStatus {
+    position: relative;
+    img {
+        &:first-child {
+            padding-bottom: 11px;
+        }
+        &:last-child {
+            position: absolute;
+            bottom: -30px;
+            left: 39px;
+
+        }
+    }
+}
+
+.terminalStatus img{
+    padding-top: 27px;
+}
+.mayNeeded{
+    padding:8% 0;
+    text-align:center;
+    a{
+        &:nth-child(1){
+            @include backgroundImage(#a0cae2, #56adea);
+
+        }
+        &:nth-child(2){
+            @include backgroundImage(#63b4f8, #87a9bf);
+
+        }
+        &:nth-child(3){
+            @include backgroundImage(#8bc6f8, #3e779e);
+
+        }
+        &:nth-child(4){
+            @include backgroundImage(#f1c445, #ffa324);
+
+        }
+        &,&:link, &:visited,&:hover,&:active{
+            padding: 20px 43px;
+            margin-right: 26px;
+            color: #fff;
+            font-size: 15px;
+
+
+        }
+    }
+
+    img{
+        width: 34px;
+        padding-right:8px;
+    }
+}
+
+
+
+@include min-screen(1920px){
+    .mayNeeded {
+        padding: 12% 0;
+        text-align: center;
+    }
+    .networkStatus>p>span{
+        &:first-child {
+            left: 27%;
+        }
+        &:nth-child(2) {
+            left: 49%;
+        }
+        &:last-child  {
+            right: 25%;
+        }
+
+    }
+
+}
+@include max-screen(1248){
+    .mayNeeded {
+        padding: 12% 0;
+        text-align: center;
+    }
+    .networkStatus>p>span{
+        &:first-child {
+            left: 15%;
+        }
+        &:nth-child(2) {
+            left: 46%;
+        }
+        &:last-child  {
+            right: 15%;
+        }
+
+    }
+
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>终端</title>
+    
+    <link rel="stylesheet" href="themes/css/terminal.css">
+   <link rel="stylesheet" href="scripts/third/iconfont/iconfont.css">
+   
+    <link rel="stylesheet" href="scripts/third/bootstrap-3.5/css/bootstrap.min.css"/>
+    <link href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+<div class="webContainer dataTransmission" id="container">
+
+    <form id="transmissionForm" method="POST" action="'+ goaheadUrl+'dataTransmission">
+        <div class="messageDetail">
+
+            <div class="terminalSetDetail ">
+                <h2 class="clearfix">串口设置</h2>
+                <div>
+                    <div class="form-group serialChoice">
+                        <label >串口选择：
+                            <input type="radio" name="serialPort" id="serialPort1" value="rs232" checked>RS232
+                           &nbsp; &nbsp; <input type="radio" name="serialPort" id="serialPort2" value="rs485">RS485
+                        </label>
+
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+
+                        <label for="baudRate" class="col-md-4 col-sm-4 ">波特率： </label>
+                        <select  id='baudRate' name="baudRate"  class="detail col-sm-8 col-md-8 form-control"  >
+                            <option value="1200">1200</option>
+                            <option value="2400">2400</option>
+                            <option value="4800">4800</option>
+                            <option value="9600">9600</option>
+                            <option value="19200">19200</option>
+                            <option value="38400">38400</option>
+                            <option value="57600">57600</option>
+                            <option value="115200">115200</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                        <label for="checkBit" class="col-md-4 col-sm-4">检验位： </label>
+                        <select  id='checkBit' name="checkBit" class="detail col-sm-8 col-md-8 form-control" >
+                            <option value="ODD">ODD</option>
+                            <option value="Even">Even</option>
+                            <option value="None">None</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                        <label for="stopBit" class="col-md-4 col-sm-4">停止位： </label>
+                        <select  id='stopBit' name="stopBit" class="detail col-sm-8 col-md-8 form-control" >
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                        <label for="dataBit" class="col-md-4 col-sm-4">数据位： </label>
+                        <select  id='dataBit' name="dataBit" class="detail col-sm-8 col-md-8 form-control" >
+                            <option value="8">8</option>
+                            <option value="7">7</option>
+
+                        </select>
+
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                        <label for="flowControl" class="col-md-4 col-sm-4">流控： </label>
+                        <select  id='flowControl' name="flowControl" class=" detail col-sm-8 col-md-8 form-control" >
+                            <option value="None">None</option>
+                            <option value="Xon/Xoff">Xon/Xoff</option>
+                            <option value="Hardware">Hardware</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <h2 class="clearfix">网口设置</h2>
+                <div>
+
+
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+
+                        <label for="lanSubMask" class="col-md-4 col-sm-4  ">子网掩码： </label>
+                        <input  id='lanSubMask' name="lanSubMask" value="" class="detail col-sm-8 col-md-8 form-control" type="text" >
+
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                        <label for="lanMac" class="col-md-4 col-sm-4">MAC： </label>
+                        <input  id='lanMac' name="lanMac" value="" class="detail col-sm-8 col-md-8 form-control" type="text" >
+
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                        <label for="lanIpAddress" class="col-md-4 col-sm-4">IP： </label>
+                        <input  id='lanIpAddress' name="lanIpAddress" value="" class="detail col-sm-8 col-md-8 form-control" type="text" >
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <a class="btn call" id="confirm" >确认</a>
+    </form>
+
+
+</div>
+
+
+
+
+<script src="scripts/dataTransmission.js"></script> 
+<!-- <script src="scripts/third/layer/layer.js"></script> -->
+
+</body>
+</html>

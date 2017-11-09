@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>终端</title>
+
+    <link rel="stylesheet" href="themes/css/terminal.css">
+ <link rel="stylesheet" href="scripts/third/iconfont/iconfont.css">
+ 
+   <link rel="stylesheet" href="scripts/third/bootstrap-3.5/css/bootstrap.min.css"/> 
+    <link href="themes/images/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+<div class="webContainer" id="container">
+
+        <div class="messageChoice">
+            <span class="terminalSet active">
+                终端设置
+            </span>
+            <span class="terminalStatus">
+                终端状态
+            </span>
+        </div>
+    <form id="messageForm" name="messageForm" action="'+ goaheadUrl+'terminalSetting" method="POST">
+    <div class="messageDetail">
+
+        <div class="terminalSetDetail ">
+            <h2 class="clearfix">工作模式设置</h2>
+            <div>
+
+
+            <div class="form-group col-md-6 col-sm-6 col-lg-6">
+
+                <label for="runningMode" class="col-md-4 col-sm-4 ">工作模式： </label>
+                <select id="runningMode" name="runningMode" class="col-sm-8 col-md-8 form-control setting">
+                    <option value="00">高频模式</option>
+                    <option value="01">低频模式</option>
+                    <option value="02">物联网传输模式</option>
+                    <option value="03">网络管理模式</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                <label for="clockCheck" class="col-md-4 col-sm-4">时钟校验： </label>
+
+                <input placeholder='请选择时间' id='clockCheck' name="clockCheck" class="col-sm-8 col-md-8 form-control" type="text" >
+
+            </div>
+            </div>
+            <h2 class="clearfix">服务器端口设置</h2>
+            <div>
+
+
+            <div class="form-group col-md-6 col-sm-6 col-lg-6">
+
+                <label for="style" class="col-md-4 col-sm-4 ">协议类型： </label>
+                <input placeholder='请输入类型' id='style' value="Tcp Server" name="style" class="setting col-sm-8 col-md-8 form-control" type="text" >
+
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                <label for="terminalIpAddress" class="col-md-4 col-sm-4 ">IP： </label>
+
+                <input placeholder='请输入IP' id='terminalIpAddress' value="" name="terminalIpAddress" class="col-sm-8 col-md-8 setting form-control" type="text" >
+
+            </div>
+            <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                <label for="terminalPort" class="col-md-4 col-sm-4">端口号： </label>
+
+                <input placeholder='请输入端口号' id='terminalPort' value="" name="terminalPort" class="setting col-sm-8 col-md-8 form-control" type="text" >
+
+            </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+        <input type="submit" class="btn call" id="confirm" value="确认" >
+    </form>
+
+    <div class="messageDetail terminal none" id="messageShow">
+
+        <div class="terminalDetail ">
+            <h2 class="clearfix">系统信息</h2>
+            <div>
+
+                <div class="form-group col-md-4 col-sm-4 col-lg-4">
+
+                    <label  class="">当前时间：<span id="currentTime" class=""></span> </label>
+
+                </div>
+                <div class="form-group col-md-4 col-sm-4 col-lg-4">
+
+                    <label  class="">运行时间：<span id="runningTime" class="detail">3小时5分钟</span> </label>
+
+                </div>
+
+                <div class="form-group col-md-4 col-sm-4col-lg-4">
+                    <label  class="">设备型号： <span id="equipmentStyle" class="detail"> K2</span></label>
+
+                </div>
+                <div class="form-group col-md-4 col-sm-4 col-lg-4">
+                    <label  class="">软件版本： <span id="softwareVersion" class="detail"> 22.5.9</span></label>
+
+                </div>
+                <div class="form-group col-md-4 col-sm-4 col-lg-4">
+                    <label  class="">硬件版本： <span id="hardwareVersion" class="detail"> A2</span></label>
+
+                </div>
+            </div>
+            <h2 class="clearfix">服务器信息</h2>
+            <div>
+
+
+                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                    <label  class="">IP地址： <span id="webserverIpAddress" class="detail"> 192.168.1.1</span></label>
+
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                <label  class="">子网掩码： <span id="webserverMask" class="detail"> 255.255.255.0</span></label>
+
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                <label  class="">MAC地址： <span id="webserverMacAddress" class="detail"> 8C:AB:8E:DB</span></label>
+
+                </div>
+
+            </div>
+            <h2 class="clearfix">工作模式</h2>
+            <div>
+                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                    <label  class="">终端工作模式： <span id="workType" class="">高频模式</span></label>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<!-- <script src="scripts/third/layer/layer.js"></script> -->
+ <script src="scripts/terminal.js"></script>
+
+
+</body>
+</html>

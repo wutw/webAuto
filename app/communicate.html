@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>通信</title>
+
+    <link rel="stylesheet" href="themes/css/communicate.css">
+ 
+    <link rel="stylesheet" href="scripts/third/iconfont/iconfont.css">
+ 
+    <link rel="stylesheet" href="scripts/third/bootstrap-3.5/css/bootstrap.min.css"/>
+    <link href="favicon.ico" rel="shortcut icon"> 
+</head>
+<body>
+<div class="webContainer" id="container">
+    <h2><img src="themes/images/phone1.png">话音</h2>
+    <div class="callPhone">
+        <div class="form-group">
+        <label for="phoneList" class="col-md-4 col-sm-4">联系人： </label>
+
+            <input  placeholder='请选择联系人' id='phoneList' name="phoneList" class="col-md-8 col-sm-8 form-control" type="text" list="input_list">
+        <datalist id="input_list">
+            <option value="wtw">15005187533</option>
+            <option value="ww">15005187872</option>
+        </datalist>
+        </div>
+        <a class="btn call" id="confirm" >确认</a>
+
+    </div>
+    <h2>
+        <img src="themes/images/message.png">信息
+    </h2>
+    <div class="message">
+        <div class="messageChoice">
+            <span class="sendMessage active">
+                发送信息
+            </span>
+            <span class="noReceive">
+                未读信息
+            </span>
+        </div>
+        <div class="messageDetail">
+            <form id="sendMessage">
+            <div class="sendMessageDetail ">
+                <div class="form-group">
+                    <label for="phoneListMessage" class="col-md-4 col-sm-4">联系人： </label>
+
+                    <input placeholder='请选择联系人' id='phoneListMessage' name="phoneListMessage" class="col-sm-8 col-md-8 form-control" type="text" list="message_list">
+                    <datalist id="message_list">
+                        <option value="wtw">15005187533</option>
+                        <option value="ww">15005187872</option>
+                    </datalist>
+                </div>
+                <div class="form-group messageEdit">
+                    <label for="messageContent" class="col-md-4 col-sm-4">短信编辑： </label>
+                    <textarea id='messageContent' name="messageContent" class="col-md-8 col-sm-8 form-control" ></textarea>
+
+                </div>
+                <a class="btn call" id="send" >发送</a>
+            </div>
+            </form>
+        <div class="noMessageDetail none">
+            <div class="form-group">
+                <label for="noReadMessage" class="col-md-4 col-sm-4">联系人： </label>
+
+                <input placeholder='请选择联系人' id='noReadMessage' name="noReadMessage" class="col-sm-8 col-md-8 form-control" type="text" list="message_list">
+                <datalist id="noReadMessageList">
+                    <option value="wtw">15005187533</option>
+                    <option value="ww">15005187872</option>
+                </datalist>
+            </div>
+            <div class="form-group messageEdit">
+                <label for="noMessageContent" class="col-md-4 col-sm-4">短信： </label>
+                <textarea id='noMessageContent' name="noMessageContent" class="col-md-8 col-sm-8 form-control" ></textarea>
+
+            </div>
+        </div>
+</div>
+    </div>
+</div>
+
+
+
+
+ <script src="scripts/communite.js"></script> 
+<!-- <script src="scripts/third/layer/layer.js"></script> -->
+</body>
+</html>

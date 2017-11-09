@@ -1,0 +1,131 @@
+@import "_app";
+@import "_reset";
+@charset "utf-8";
+
+.webContainer {
+    padding: 0 20px;
+        height: 100%;
+    h2{
+        border-bottom: 1px dashed #0e74cc;
+        padding:{
+            bottom:13px;
+            top:20px;
+        }
+        margin:{
+            top:0!important;
+            bottom: 0!important;
+        }
+
+        img{
+            padding-right: 8px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.callPhone{
+    padding: 3% 0;
+}
+.messageDetail {
+    padding: 3% 2% 1%;
+    border: 1px solid #eaeaea;
+
+    .form-group {
+        display: block;
+        float: none;
+        /* margin-bottom: 22px!important;*/
+        @at-root  .form-group{
+            display: inline-block;
+            padding-left: 0 !important;
+            float: left;
+            white-space: nowrap;
+            height: 42px;
+            line-height: 39px;
+            min-width: 400px;
+            width: 42%;
+            max-width: 550px;
+            .col-md-8{
+
+                width: 2/3*100% !important;
+            }
+    }
+
+}
+}
+
+    .form-control{
+        background-color: #f5f7f8!important;
+        display:inline-block!important;
+    }
+
+    .callPhone,.messageDetail{
+        color: #717070;
+        label{
+            text-align: right;
+            font-weight: 600;
+        }
+    }
+    a.call, a.call:link,a.call:visited, a.call:hover,a.call:active{
+        padding: 5px 22px;
+        border: 1px solid #81bbec;
+        margin-left: 42px;
+        background-image: linear-gradient(7deg ,#00A1CB ,#3981ab);
+        color: #fff;
+    }
+    .message{
+        padding:3.5% 0 0;
+    }
+
+    .messageChoice {
+        padding-bottom: 15px;
+        span {
+            padding: 8px 30px;
+            font-size: 17px;
+            margin-right: 10px;
+            color: #fff;
+            font-weight: 500;
+            background: #89b8d5;
+            border-radius: 6px;
+            &.active {
+                color: #717070;
+                background: #ffffff;
+                padding: 17px 30px;
+                border:1px solid #eaeaea;
+
+               
+
+                border-bottom :none;
+            
+                border-bottom-left-radius: 0; 
+        
+               border-bottom-right-radius: 0;
+
+                    
+
+                
+            }
+        }
+    }
+
+
+    textarea {
+        .form-control {
+
+            height: 110px !important;
+            @at-root .form-control {
+                font-size:16px !important;
+            }
+        }
+    }
+    .messageEdit{
+        height: 120px!important;
+    }
+    #send{
+        margin-left:21%;
+    }
+
+
+
+    label.error {
+        margin-left: 30%;
+    }

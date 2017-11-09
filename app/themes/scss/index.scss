@@ -1,0 +1,117 @@
+@import "_app";
+@import "_reset";
+@charset "utf-8";
+
+.content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: 450px;
+    min-width:1200px;
+    @include background(bg);
+
+    background-position: center center;
+    background-size: cover;
+    color: #9b9ea0;
+}
+.top{
+    height: 16%;
+    img{
+        height: 45px;
+        position: absolute;
+        left: 4%;
+        top: 6%;
+
+    }
+
+}
+
+#login{
+    width: 330px;
+    display: table;
+    margin: 4% auto;
+    h2{
+        background-color: #2697F2;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 4px;
+        padding: 10px 0;
+        margin-bottom: 0!important;
+    }
+
+}
+
+.loginContent{
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 40px 20px 60px;
+  p {
+        padding-top: 21px;
+        padding-bottom: 35px;
+    }
+}
+.passwordLabel{
+    position: relative;
+    width: 100%;
+}
+
+
+.loginInput{
+    display: block;
+    width: 100%;
+    padding: 2% 15%;
+    height: 40px;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 40px;
+    color: #9b9ea0;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    @include shadow(inset 0 1px 1px rgba(0,0,0,.075));
+    @include transition( border-color ease-in-out .15s,box-shadow ease-in-out .15s);
+}
+.icon-pwdsafe{
+    position: absolute;
+    left: 3%;
+    top: 13%;
+    font-size: 18px !important;
+    color: #a6a8ab;
+}
+
+
+
+
+.left{
+    float:left;
+}
+.right{
+    float:right;
+    a{
+        &,&:focus,&:hover{
+            color:#6fb7f5 !important;
+        }
+    }
+}
+#rememberPsw{
+    margin-right: 6px;
+    vertical-align: top;
+}
+
+#loginBtn{
+    text-align: center;
+    /* background-color: #1f7d8e !important; */
+    @include backgroundImage(#75b5f7, #0e74cc);
+
+    line-height: 34px !important;
+    border: 1px solid #75b5f7;
+    padding: 0 !important;
+    color: #ffffff !important;
+    width: 100%;
+    font-size: 16px !important;
+    font-weight: 500;
+}
+body,html{
+    overflow: auto;
+}

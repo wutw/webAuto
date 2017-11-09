@@ -1,0 +1,8 @@
+{
+  "runningMode": "02",
+  "style":"Tcp Server",
+  "terminalIpAddress":"192.1.2.1",
+  "terminalPort":"2"
+
+
+}

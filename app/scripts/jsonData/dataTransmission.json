@@ -1,0 +1,11 @@
+{
+  "serialPort":"rs232",
+  "baudRate":"1200",
+  "checkBit":"None",
+  "stopBit":"1",
+  "dataBit":"8",
+  "flowControl":"None",
+  "lanSubMask":"255.255.255.1",
+  "lanMac":"22-22-22-22-22-22",
+  "lanIpAddress":"10.150.150.150"
+}

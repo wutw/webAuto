@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>终端</title>
+
+    <link rel="stylesheet" href="themes/css/terminal.css">
+   
+   <link rel="stylesheet" href="scripts/third/iconfont/iconfont.css">
+   
+   <link rel="stylesheet" href="scripts/third/bootstrap-3.5/css/bootstrap.min.css"/>
+    <link href="themes/images/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+<div class="webContainer flow" id="container">
+
+    <form id="messageForm">
+        <div class="messageDetail">
+
+            <div class="terminalSetDetail ">
+                <h2 class="clearfix">当月流量统计</h2>
+                <div>
+                    <div class="form-group currentMonth">
+                        <label >当前月份：
+                            <span id="getMonth">
+
+                           </span>
+                        </label>
+
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+
+                        <label for="upFlow1" class="col-md-4 col-sm-4 ">上行流量值： </label>
+                        <input  id='upFlow1' name="upFlow1" value="220" class="col-sm-8 col-md-8 form-control" type="text" >
+                        M
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                        <label for="downFlow1" class="col-md-4 col-sm-4">下行流量值： </label>
+                        <input  id='downFlow1' name="downFlow1" value="220" class="col-sm-8 col-md-8 form-control" type="text" >
+                        M
+                    </div>
+                </div>
+
+                <h2 class="clearfix">日流量统计</h2>
+                <div>
+                    <div class="form-group currentDate">
+                        <label >日期：
+                           <select id="getDay" class="form-control"  style="position: absolute;width: 80px;z-index: 1;margin-left: 13px;"  onmousedown="if(this.options.length>6){this.size=7}" onblur="this.size=0" onchange="this.size=0">
+
+                           </select>
+                        </label>
+
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+
+                        <label for="upFlow2" class="col-md-4 col-sm-4 ">上行流量值： </label>
+                        <input  id='upFlow2' name="upFlow2" value="220" class="col-sm-8 col-md-8 form-control" type="text" >
+                        M
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                        <label for="downFlow2" class="col-md-4 col-sm-4">下行流量值： </label>
+                        <input  id='downFlow2' name="downFlow2" value="220" class="col-sm-8 col-md-8 form-control" type="text" >
+                        M
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </form>
+
+
+</div>
+
+
+<script src="scripts/flowTotal.js"></script> 
+</body>
+</html>

@@ -1,0 +1,288 @@
+@import "_app";
+@import "_reset";
+@charset "utf-8";
+html{
+    overflow:hidden;
+}
+.wrapper{
+    padding: 15px 12px 0;
+    background: #0f5c9c;
+    width:100%;
+    height:100%
+}
+header{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    line-height: 33px;
+}
+.right{
+    &,& a{
+        color: #2697f2 !important;
+        font-weight: 500;
+    }
+}
+
+
+
+.left{
+    float:left;
+    img{
+        height: 38px;
+    }
+}
+.right{
+
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    background: url(../images/circleCorner.png) no-repeat;
+    padding: 0px 16px 0px 17px;
+    a{
+        padding-left: 7px;
+    }
+}
+
+@mixin module($width:18%,$color:#fff,$minWidth:180px,$height:65px){
+    width: $width;
+    background-color:$color;
+    min-width: $minWidth;
+    height: calc(100% - #{$height});
+
+}
+aside{
+    @include module();
+
+   position:absolute;
+}
+#right-container{
+    @include module(81%,#fff,900px,50px);
+
+    margin-left:19%;
+
+}
+.indexPage {
+    span{
+        background: url(#{$images}main.png) no-repeat;
+
+    }
+    &.active span{
+        background:url(#{$images}main-y.png) no-repeat;
+
+    }
+}
+
+
+
+.terminalPage{
+    span{
+        @include background(computer);
+
+    }
+
+    &.active span{
+        @include background(computer-y);
+        padding:0 8px;
+    }
+
+}
+
+.communicatePage{
+    span{
+        @include background(signal);
+
+    }
+    &.active span{
+        @include background(signal-y);
+
+    }
+}
+
+.locationPage {
+    span {
+        @include background(GPS-b);
+
+
+    }
+    .active span{
+        @include background(GPS-y);
+
+
+    }
+
+}
+
+.flowTotal {
+    span {
+        @include background(flow);
+
+
+    }
+    .active span{
+        @include background(flow-y);
+
+
+    }
+
+}
+
+.dataTransmission {
+    span {
+        @include background(data);
+
+
+    }
+    .active span{
+        @include background(data-y);
+
+
+    }
+
+}
+
+
+
+    ul li span{
+        display:inline-block!important;
+        margin: 0px 13px 0 15px;
+        width: 27px;
+        vertical-align: text-bottom;
+        height: 25px;
+    }
+    aside ul{
+        padding-top:10px;
+        li{
+            font-size: 16px;
+            height: 42px;
+            line-height: 42px;
+            &:hover{
+                background-color: #f7f9fa;
+            }
+            &.active{
+                background: #2b98f1;
+                a{
+                    color:#fff
+                }
+            }
+
+        a {
+            &,&:hover,&:active{
+                color: #49a7fb;
+                font-weight: 500;
+
+            }
+        }
+    }
+}
+        header  .dropdown-menu {
+        margin: 2px;
+        float: right;
+        min-width: 90px;
+        background-color: #dee6e6;
+        padding: 0px;
+        height: 88px;
+    }
+
+         .dropdown-menu {
+       
+        li {
+            height: 41px;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            float: left;
+            font-size: 15px;
+
+            padding-right: 1.5%;
+            line-height: 48px;
+            position: relative;
+            a {
+                text-align: center;
+                border-radius: 0px;
+                width: 100%;
+                padding: 5px;
+                color: #333;
+                font-size: 14px;
+                height: 38px;
+                line-height: 30px;
+                background: #fafafa;
+                clear: both;
+                white-space: nowrap;
+                /* background-color: rgba(209, 214, 207, 0.89); */
+            &:hover,&.active{
+                background-color: #0FBBD9;
+                color: #000;
+            }
+            }
+        }
+        a{
+            color: #0b7bbf!important;
+            font-size: 14px !important;
+            line-height: 2.428571 !important;
+        }
+
+    }
+
+
+
+    .right>ul>li{
+        display:inline-block;
+    }
+
+    #modifyPassword label{
+
+        text-align: right;
+        white-space: nowrap;
+        font-weight: 500 !important;
+    }
+    .form-group {
+        display: inline-block;
+        padding-left: 0 !important;
+        float: left;
+        width: 340px;
+        white-space: nowrap;
+        /* height: 48px;*/
+        line-height: 35px;
+        margin-bottom: 5px !important;
+        margin-top: 12px;
+    }
+    .navbarSide{
+        height: -webkit-calc(100% - 50px);
+        height:-moz-calc(100% - 50px);
+        height:calc(100% - 50px);
+    }
+    .sideMenuTip {
+        height: 100%;
+        width: 60px;
+        .sideImg {
+            background: url(#{$images}table.png) center 10px no-repeat;
+            background-size: 25px;
+            height: 100%;
+        }
+    }
+
+    @include min-screen(1920px){
+        aside ul li {
+            height: 50px;
+            padding-left: 8%;
+            line-height: 50px;
+            z-index:100;
+        }
+        .left img {
+            height: 45px;
+        }
+        header {
+            height: 65px;
+            line-height: 32px;
+        }
+        .right {
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            @include background(circleCorner);
+
+            padding: 1px 47px 2px;
+        }
+
+
+    }

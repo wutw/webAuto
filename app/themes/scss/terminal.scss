@@ -1,0 +1,195 @@
+@import "_app";
+@import "_reset";
+
+.webContainer{
+    padding: 34px 24px 10px;
+}
+.messageChoice {
+    padding-bottom: 15px;
+    span {
+        padding: 8px 30px;
+        font-size: 17px;
+        margin-right: 10px;
+        color: #fff;
+        font-weight: 500;
+        background: #89b8d5;
+        border-radius: 6px;
+        &.active {
+            color: #717070;
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            padding: 17px 30px;
+            border-bottom: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+}
+
+    .messageDetail {
+        padding: 2%;
+        min-height:435px !important;
+        border: 1px solid #eaeaea;
+        color: #717070;
+
+        @at-root .flow &{
+            min-height:435px !important;
+    }
+}
+.terminalSetDetail{
+        &>div:first-of-type{
+            height: 32%;
+            min-height: 127px;
+            padding: 4% 3%;
+        }
+        &>div:last-of-type{
+            height: 43%;
+            min-height:175px;
+            padding: 4% 3% 0;
+        }
+
+    }
+ .dataTransmission .terminalSetDetail {
+        &>div:nth-of-type(1) {
+            height: 58%;
+            min-height: 272px;
+            padding: 2% 3%;
+        }
+       &>div:nth-of-type(2) {
+            height: 25%;
+            min-height: 125px;
+            padding: 2% 3% 0;
+        }
+    }
+
+  
+    input.call,a.call, a.call:link, a.call:visited, a.call:hover, a.call:active {
+        padding: 5px 22px;
+        border: 1px solid #81bbec;
+        margin-left: 45%;
+        /* margin: 1% auto; */
+        margin-top: 15px;
+        background-image: linear-gradient(7deg ,#00A1CB ,#3981ab);
+        color: #fff;
+    }
+
+
+    .terminalSetDetail>h2 ,.terminalDetail>h2 {
+        margin-top:0 !important;
+        border-bottom: 1px dashed #0e74cc;
+        padding-bottom: 13px;
+        margin-bottom: 0!important;
+    }
+
+    form,.terminalSetDetail,.terminalDetail  {
+        height:100%
+    }
+    
+     .form-group{
+        display: inline-block;
+        padding-left: 0 !important;
+        float: left;
+        white-space: nowrap;
+        height: 44px !important;
+        line-height: 39px;
+
+        /*min-width: 400px;*/
+        width: 42% ;
+        max-width: 550px;
+        .col-md-8 {
+            width: 66.66666667%!important;
+        }
+    }
+
+
+    .terminalDetail>div:not(.locationDetail){
+        height: 33%;
+        min-height:135px;
+        padding: 1% 3%;
+    }
+
+
+    .terminal .terminalDetail>div:last-of-type{
+        height: 20%;
+        padding: 1% 3%;
+    }
+
+    .messageDetail label {
+        text-align: right;
+        font-weight: 600;
+    }
+    @include min-screen(1920){
+        .terminalSetDetail>div {
+            height: 40%;
+            padding: 7% 3%;
+        }
+        a.call, a.call:link, a.call:visited, a.call:hover, a.call:active {
+
+            margin-top: 30px;
+
+        }
+        .terminalDetail>div :not(.locationDetail){
+            height: 32%;
+            padding: 3% 3%;
+        }
+    }
+
+
+    label>span{
+        color: #0da0ce;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .messageDetail .form-group label{
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .form-control{
+        background-color: #f5f7f8!important;
+    }
+
+    .location .locationDetail {
+        padding:1% 3%;
+        div {
+            height: 21%;
+            padding: 2% 3%;
+        }
+    }
+    .flow,.flow form .messageDetail,.dataTransmission{
+        height:100%;
+    }
+    .flow .terminalSetDetail>div{
+        height:43%;
+        min-height:183px;
+        padding: 2% 3%;
+    }
+
+    .flow .form-group{
+        float:none!important;
+        display:block !important;
+    }
+    .currentDate,.currentMonth,.serialChoice{
+        width:100% !important;
+    }
+    #getDay{
+        display:inline-block;
+    }
+    .flow .form-group input{
+        margin-right:10px;
+    }
+    .flow .form-group .col-md-8,.flow .form-group .col-sm-8{
+        width: 62.66666667%!important;
+    }
+    .flow,.dataTransmission{
+        padding: 21px 24px 15px!important;
+    }
+    .flow .messageDetail, .messageDetail {
+        padding: 2% 2% 0;
+    }
+    
+
+    .serialChoice input{
+        margin: 4px 7px 0 !important;
+    }
+
