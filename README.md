@@ -3,8 +3,8 @@ gulp combined with webpack build demo
 
 ##问题与解决
 1. 用import载入模块，报错 :unexpected token import  
-<p>原因：浏览器不能识别es6,编译时确保所有模块用babel解析为es5</p>
-<p>解决：< https://elanderson.net/2016/09/unexpected-token-import-with-gulp/ > </p>
+  <p>原因：浏览器不能识别es6,编译时确保所有模块用babel解析为es5</p>
+  <p>解决：< https://elanderson.net/2016/09/unexpected-token-import-with-gulp/ > </p>
 新建.babelrc文件
  
 ```
