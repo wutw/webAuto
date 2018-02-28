@@ -28,8 +28,9 @@ node路径在C:\node\nodejs ，nvm list 当前下载node版本， nvm use 8.7.0�
     
     解决 http://m.blog.csdn.net/qq129169/article/details/71734863   方法4不错 
     建立jquery-vendor.js
+    
     ```
-    import $ from 'jquery';
+import $ from 'jquery';
 window.$ = $;
 window.jQuery = $;
 export default $;
@@ -42,7 +43,7 @@ export default $;
                         test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
                         loader: "imports-loader?this=>window"//将jquery映射为全局
                 },
-    ```
+  ```
     
     在js里import $ from  './jquery-vendor.js'即可
     
