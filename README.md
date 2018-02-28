@@ -2,9 +2,10 @@
 gulp combined with webpack build demo
 
 ##问题与解决
-1. 用import载入模块，报错 < https://elanderson.net/2016/09/unexpected-token-import-with-gulp/ >
+1. 用import载入模块，报错 :unexpected token import
 因为浏览器不能识别es6,编译时确保所有模块用babel解析为es5
-解决：新建.babelrc文件
+解决：< https://elanderson.net/2016/09/unexpected-token-import-with-gulp/ >
+新建.babelrc文件
 
 ```
 {
@@ -38,6 +39,6 @@ browser-sync start --server --files "css/*.css, *.html"
 browser-sync start --server --files "**/*.css, **/*.html"
 ```
 
-6. 对应第三方插件，
-  + 目前bootstrap，不能直接import，无用，bootstrap用html引用，用bootstrap.js时要引用jquery，
-  + 其它使用jquery的插件可以打包引用
+6. 对应第三方插件
+ * 目前bootstrap，不能直接import，无用，bootstrap用html引用，用bootstrap.js时要引用jquery
+   * 其它使用jquery的插件可以打包引用
