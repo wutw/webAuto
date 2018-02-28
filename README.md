@@ -46,7 +46,7 @@ node路径在C:\node\nodejs ，nvm list 当前下载node版本， nvm use 8.7.0�
   ```
     
   在js里import $ from  './jquery-vendor.js'即可
-  < https://stackoverflow.com/questions/28969861/managing-jquery-plugin-dependency-in-webpack >
+  <https://stackoverflow.com/questions/28969861/managing-jquery-plugin-dependency-in-webpack>
   
 5. 浏览器同步更新使用browser-sync插件， 全局安装，静态页通过单独的端口访问可视化控制页面。可视化界面允许控制所有的设备，同步推送更新等
 等。
